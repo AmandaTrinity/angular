@@ -1,0 +1,32 @@
+# Veja https://help.github.com/articles/ignoring-files/ para mais informações sobre como ignorar arquivos.
+
+# Dependências e pacotes
+# Evita que a pasta de dependências, que pode ser muito grande, seja enviada para o repositório.
+# Ela deve ser gerada localmente com `npm install`.
+/node_modules
+
+# Arquivos de lock de outros gerenciadores de pacotes para manter a consistência
+/pnpm-lock.yaml
+/yarn.lock
+
+# Logs
+# Arquivos de log gerados pelo npm ou yarn em caso de erros.
+/npm-debug.log*
+/yarn-error.log
+/yarn-debug.log
+
+# Diretório de build
+# Contém os arquivos compilados da sua aplicação. É gerado a cada build.
+/dist
+/out-tsc
+
+# Cache do Angular
+# Arquivos temporários e de cache gerados pelo Angular CLI para acelerar os builds.
+/.angular
+
+# Arquivos de IDE e editores
+.vscode/
+.idea/
+
+# Resultados de testes
+/coverage
