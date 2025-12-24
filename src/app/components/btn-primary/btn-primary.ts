@@ -4,6 +4,7 @@ type BtnVariants = "primary" | "secondary";
 
 @Component({
   selector: 'app-btn-primary',
+  standalone: true,
   imports: [],
   templateUrl: './btn-primary.html',
   styleUrl: './btn-primary.scss',
