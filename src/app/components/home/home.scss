@@ -10,18 +10,39 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 24px;
     font-family: "Roboto", sans-serif;
+
+    .headline {
+        text-align: center;
+    }
 
     span {
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 500;
         color: color.$secondary-text;
     }
 
-    h1 {
-        font-size: 72px;
-        font-weight: 900;
+    .headline h1 {
+        font-size: 48px; // Tamanho de fonte menor para telas pequenas
+        font-weight: 800;
         color: color.$primary-text;
+        margin: 0;
+
+        b {
+            background: linear-gradient(180deg, color.$light-primary-color, color.$secondary-color);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            font-style: normal;
+        }
+    }
+
+    // Garante que a imagem se ajuste e não transborde
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -32,10 +53,11 @@ main {
     justify-content: center;
 
     gap: 70px;
+    gap: 40px;
     
     .benefit-data {
-        border-bottom: 10px solid color.$secondary-color;
-        padding-bottom: 20px;
+        border-inline-start: 10px solid color.$secondary-color;
+        padding-inline-start: 20px;
 
         h2 {
             font-size: 48px;
@@ -64,46 +86,6 @@ main {
 
 .cta-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.benefit-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    gap: 40px;
-
-    .benefit-data {
-        border-bottom: 10px solid color.$secondary-color;
-        padding-bottom: 20px;
-
-        h2 {
-            font-size: 48px;
-            font-weight: 600;
-            font-family: "Roboto", sans-serif;
-            color: color.$primary-text;
-        }
-    }
-
-    p {
-        font-size: 24px;
-        font-style: italic;
-        font-weight: 300;
-
-        b {
-            background: -webkit-linear-gradient(180deg, color.$light-primary-color, color.$secondary-color);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-style: normal;
-        }
-    }
-}
-.cta-section {
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -122,10 +104,11 @@ main {
 @media (min-width: 768px) {
     .main-section {
         flex-direction: row;
-        span {
-            font-size: 20px;
+
+        .headline {
+            text-align: left;
         }
-        h1 {
+        .headline h1 {
             font-size: 72px;
         }
     }
