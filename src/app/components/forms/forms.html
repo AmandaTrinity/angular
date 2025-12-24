@@ -1,0 +1,20 @@
+<section class="form-section pad-70">
+    <div class="text">
+        <h3>Receba um diagnóstico gratuito</h3>
+        <p>Nossos especialistas farão uma avaliação inicial da sua arquitetura e identificarão os principais pontos de melhoria para garantir performance e escalabilidade. Preencha o formulário para começar.</p>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <label for="nome">Nome:</label>
+        <input id="nome" formControlName="nome"/>
+        
+        <label for="email">E-mail:</label>
+        <input id="email" formControlName="email"/>
+        <app-btn-primary 
+            btn-text="Receber diagnóstico"
+            variant="secondary"
+            [disabled]="!form.valid"
+            [loading]="loading()" 
+        > 
+        </app-btn-primary>
+    </form>
+</section>
