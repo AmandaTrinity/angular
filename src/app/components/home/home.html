@@ -20,17 +20,11 @@
         <app-btn-primary btn-text="Fale com os nossos especialistas"></app-btn-primary>
     </section>
     <app-forms></app-forms>
-    <section class="benefit-section pad-70">
-        <app-card-benefits
-            card-title="Equipe capacitada"
-            img-path="./assets/team.png"
-            card-description="Contamos com especialistas em arquitetura de software, performance e cloud para garantir que seu projeto atinja os mais altos padrões de qualidade e eficiência."
-        >
-        </app-card-benefits>
-        <app-card-benefits
-            card-title="Seus projetos guiados do zero"
-            img-path="./assets/project-guide.png"
-            card-description="Acompanhamos seu projeto desde a concepção até a implementação, garantindo as melhores práticas de mercado e uma solução robusta que atenda suas necessidades."
+    <section class="benefit-section pad-70" style="flex-wrap: wrap;">
+        <app-card-benefits *ngFor="let benefit of benefits"
+            [card-title]="benefit.title"
+            [img-path]="benefit.image"
+            [card-description]="benefit.description"
         >
         </app-card-benefits>
     </section>

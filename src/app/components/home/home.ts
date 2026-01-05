@@ -21,5 +21,16 @@ import { Footer } from '../footer/footer';
   styleUrl: './home.scss',
 })
 export class Home {
-
+  benefits = [
+    {
+      title: 'Equipe capacitada',
+      image: './assets/team.png',
+      description: 'Contamos com especialistas em arquitetura de software, performance e cloud para garantir que seu projeto atinja os mais altos padrões de qualidade e eficiência.'
+    },
+    {
+      title: 'Seus projetos guiados do zero',
+      image: './assets/project-guide.png',
+      description: 'Acompanhamos seu projeto desde a concepção até a implementação, garantindo as melhores práticas de mercado e uma solução robusta que atenda suas necessidades.'
+    }
+  ];
 }
